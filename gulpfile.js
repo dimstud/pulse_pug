@@ -53,10 +53,23 @@ gulp.task('sass', function(callback) {
 	callback();
 });
 
+// Копирование CSS
+gulp.task('copy:css', function(callback) {
+	return gulp.src('./src/css/**/*.*')
+		.pipe(gulp.dest('./dist/css/'))
+	callback();
+});
 // Копирование Изображений
 gulp.task('copy:img', function(callback) {
 	return gulp.src('./src/img/**/*.*')
 		.pipe(gulp.dest('./dist/img/'))
+	callback();
+});
+
+// Копирование Шрифты
+gulp.task('copy:fonts', function(callback) {
+	return gulp.src('./src/fonts/**/*.*')
+		.pipe(gulp.dest('./dist/fonts/'))
 	callback();
 });
 
@@ -106,7 +119,7 @@ gulp.task(
 		'default', 
 		gulp.series( 
 			gulp.parallel('clean:dist'),
-			gulp.parallel('sass', 'pug', 'copy:img', 'copy:js'), 
+			gulp.parallel('sass', 'pug','copy:fonts', 'copy:img', 'copy:css', 'copy:js'), 
 			gulp.parallel('server', 'watch'), 
 			)
 	);
