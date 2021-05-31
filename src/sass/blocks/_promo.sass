@@ -2,7 +2,7 @@
 	min-height: 650px
 	padding-top: 21px
 	padding-bottom: 93px
-	background-image: url(../img/header/bg.jpg)
+	background: url(../img/header/bg.jpg) center (center/cover) no-repeat
 	&__wrapper
 		display: flex
 		flex-direction: column
@@ -48,3 +48,16 @@
 			color: #FFFFFF
 			text-decoration: underline
 			text-transform: uppercase
+
+
+@media ( max-width: 991px )
+	.promo
+		min-height: 560px
+		padding-bottom: 24px
+		&__wrapper
+			margin-top: 70px
+			align-items: center
+		&__title
+			font-size: 36px
+		&__subtitle
+			font-size: 20px
