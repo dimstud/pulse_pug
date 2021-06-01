@@ -1,3 +1,9 @@
 mixin descr(head, phorag)
 	h2 #{head}
 	p #{phorag}
+
+mixin advantages__item(img, title, subtitle, descr)
+	.advantages__item
+		img.advantages__icon(src="img/advantages/" + img, alt= title)
+		.advantages__subtitle #{subtitle}
+		.advantages__descr #{descr}
