@@ -50,14 +50,42 @@
 			text-transform: uppercase
 
 
+@media ( max-width: 1200px )
+	.promo
+		&__wrapper
+			align-items: center
+		&__title
+			font-size: 40px
+		&__subtitle
+			font-size: 22px
+
+
 @media ( max-width: 991px )
 	.promo
 		min-height: 560px
 		padding-bottom: 24px
 		&__wrapper
 			margin-top: 70px
-			align-items: center
 		&__title
 			font-size: 36px
 		&__subtitle
 			font-size: 20px
+
+@media ( max-width: 767px )
+	.promo
+		&__wrapper
+			margin-top: 50px
+@media ( max-width: 575px )
+	.promo
+		&__title
+			font-size: 30px
+			text-align: center
+		&__subtitle
+			font-size: 16px
+			text-align: center
+		&__icons
+			width: 100%
+		&__icon
+			width: 74px
+			font-size: 9px
+			line-height: 12px

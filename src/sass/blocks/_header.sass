@@ -29,7 +29,35 @@
 			color: #ffffff
 
 
-@media ( max-width: 767px )
+@media ( max-width: 991px )
 	.header
 		&__logo
-			width: 150px
+			width: 200px
+		&__official
+			font-size: 10px
+			span
+				font-size: 16px
+
+
+@media ( max-width: 767px )
+	.header
+		flex-wrap: wrap
+		&__logo
+			flex-basis: 100%
+			img
+				width: 250px
+				margin: 0 auto
+				display: block
+		&__official
+			margin-top: 20px
+		&__contacts
+			margin-top: 20px
+
+
+@media ( max-width: 575px )
+	.header
+		flex-direction: column
+		&__logo
+			width: 200px
+			img
+				width: 100%
