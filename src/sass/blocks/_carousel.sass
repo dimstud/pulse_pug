@@ -6,10 +6,45 @@
 		width: 590px
 		img
 	&-control-next-icon
-		width: 30px
-		height: 50px
 		background-image: url(../img/slide/right.svg)
 	&-control-prev-icon
-		width: 30px
-		height: 50px
 		background-image: url(../img/slide/left.svg)
+	&-indicators
+		button
+			background-color: $red
+
+
+@media ( max-width: 1200px )
+	.carousel
+		&-slide
+			padding-top: 70px
+			padding-bottom: 70px
+
+
+@media ( max-width: 991px )
+	.carousel
+		&-slide
+			padding-top: 50px
+			padding-bottom: 50px
+		&-item
+			width: 100%
+			height: 400px
+
+
+@media ( max-width: 767px )
+	.carousel
+		&-slide
+			padding-top: 40px
+			padding-bottom: 40px
+		&-item
+			height: 330px
+		&-control-next-icon
+			display: none
+		&-control-prev-icon
+			display: none
+
+
+@media ( max-width: 575px )
+	.carousel
+		&-item
+			height: 180px
