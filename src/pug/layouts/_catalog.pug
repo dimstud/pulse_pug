@@ -5,8 +5,8 @@ include ../mixins/_description.pug
 			.col-xl-10.offset-1 
 				h2.title Каталог пульсометров
 				ul.catalog__tabs 
-					+tab('Для фитнеса', 'catalog__tab_active')
-					+tab('для бега')
-					+tab('для триатлона')
+					+catalog__tab('Для фитнеса', 'catalog__tab_active')
+					+catalog__tab('для бега')
+					+catalog__tab('для триатлона')
 				.catalog__content 
-
+					+catalog-item('photo.png', 'Пульсометр Polar FT1', 'Для первых шагов в тренировках, основанных на сердечном ритме', '4 750 руб.', '4 500 руб.')

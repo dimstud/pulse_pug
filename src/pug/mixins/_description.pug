@@ -1,22 +1,24 @@
-mixin descr(head, phorag)
-	h2 #{head}
-	p #{phorag}
-
 mixin advantages__item(img, title, subtitle, descr)
 	.advantages__item
 		img.advantages__icon(src="img/advantages/" + img, alt= title)
 		.advantages__subtitle #{subtitle}
 		.advantages__descr #{descr}
 
-mixin tab(descr, active='')
+mixin catalog__tab(descr, active='')
 	li(class="catalog__tab "+active)
 		div #{descr}
 
-mixin catalog-item()
-	img.catalog-item__img(src="", alt="")
-	.catalog-item__subtitle
-	.catalog-item__descr
-	a.catalog-item__link(href="#") 
-	.catalog-item__footer
-		.catalog-item__prices
-		button.catalog-item__btn
+mixin catalog-item(img, subtitle, descr, oldPrice, price)
+	.catalog-item
+		.catalog-item__wrapper 
+			.catalog-item__content 
+				img.catalog-item__img(src="img/catalog/" + img, alt= "photo")
+				.catalog-item__subtitle #{subtitle}
+				.catalog-item__descr #{descr}
+				a.catalog-item__link(href="#") ПОДРОБНЕЕ
+			.catalog-item__list Hello World
+		.catalog-item__footer
+			.catalog-item__prices
+				.catalog-item__old-price #{oldPrice}
+				.catalog-item__price #{price}
+			button.catalog-item__btn КУПИТЬ
