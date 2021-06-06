@@ -11,12 +11,17 @@ mixin catalog__tab(descr, active='')
 mixin catalog-item(img, subtitle, descr, oldPrice, price)
 	.catalog-item
 		.catalog-item__wrapper 
-			.catalog-item__content 
+			.catalog-item__content.catalog-item__content_active
 				img.catalog-item__img(src="img/catalog/" + img, alt= "photo")
 				.catalog-item__subtitle #{subtitle}
 				.catalog-item__descr #{descr}
 				a.catalog-item__link(href="#") ПОДРОБНЕЕ
-			.catalog-item__list Hello World
+			ul.catalog-item__list
+				li Вы услышите звуковое оповещение о нужном пульсе во время тренировки;
+				li Вы увидите информативный графический индикатор целевых тренировочных зон пульса;
+				li Также Вы увидите информацию о расходе калорий за тренировку;
+				li Вы сможете посмотреть данные по 10 тренировкам.
+				a(href="#").catalog-item__back НАЗАД
 		.catalog-item__footer
 			.catalog-item__prices
 				.catalog-item__old-price #{oldPrice}

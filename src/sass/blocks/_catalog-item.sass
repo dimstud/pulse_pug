@@ -1,8 +1,13 @@
 .catalog-item
 	width: 303px
 	min-height: 442px
+	margin-right: 5px
+	margin-bottom: 20px
 	padding: 20px
 	border: 2px solid #E8E8E8
+	overflow: hidden
+	&:last-child
+		margin-right: 0
 	&__img
 		height: 200px
 		max-width: 100%
@@ -68,7 +73,49 @@
 		width: calc( 200% + 40px )
 	&__content
 		width: 50%
-		margin-right: 20px
+		margin-right: 0px
+		transform: translateX(-100%)
+		transition: .5s all
+		&_active
+			transform: translateX(0%)
+			margin-right: 20px
 	&__list
 		width: 50%
 		margin-left: 20px
+		margin-bottom: 0
+		padding-right: 20px
+		padding-left: 12px
+		transform: translateX(0%)
+		transition: .5s all
+		list-style-type: none
+		li
+			position: relative
+			margin-bottom: 3px
+			font-weight: 300
+			font-size: 14px
+			line-height: 21px
+			color: #555555
+			&::before
+				content: ''
+				display: block
+				width: 5px
+				height: 5px
+				position: absolute
+				left: -17px
+				top: 7px
+				border: none
+				background: $red
+		&_active
+			transform: translateX(-100%)
+			margin-left: 0px
+	&__back
+		position: absolute
+		display: block
+		right: 46%
+		bottom: 0
+		font-weight: 500
+		font-size: 14px
+		text-align: center
+		text-decoration: underline
+		text-transform: uppercase
+		color: $red
