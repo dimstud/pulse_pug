@@ -123,3 +123,27 @@
 		color: $red
 		&:hover
 			color: $red
+
+@media ( max-width: 1200px )
+	.catalog-item
+		margin-left: 11.7%
+		margin-right: 11.7%
+		&:nth-child(2n+1)
+			margin-right: 0
+
+@media ( max-width: 991px )
+	.catalog-item
+		margin-left: 4%
+		margin-right: 4%
+		&:nth-child(2n+1)
+			margin-right: 0
+
+@media ( max-width: 767px )
+	.catalog-item
+		margin-right: auto
+		margin-left: auto
+		&:nth-child(2n+1)
+			margin-right: auto
+		&:last-child
+			margin-right: auto
+			margin-left: auto
