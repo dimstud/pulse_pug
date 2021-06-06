@@ -2,13 +2,13 @@ include ../mixins/_description.pug
 .catalog
 	.container 
 		.row
-			.col-xl-10.offset-1 
+			.col-xl-10.offset-1.col-12
 				h2.title Каталог пульсометров
 				ul.catalog__tabs 
 					+catalog__tab('Для фитнеса', 'catalog__tab_active')
 					+catalog__tab('для бега')
 					+catalog__tab('для триатлона')
-				.catalog__content 
+				.catalog__content.catalog__content_active
 					+catalog-item('photo.png', 'Пульсометр Polar FT1', 'Для первых шагов в тренировках, основанных на сердечном ритме', '4 750 руб.', '4 500 руб.')
 					+catalog-item('photo.png', 'Пульсометр Suunto M2', 'Для первых шагов в тренировках, основанных на сердечном ритме', '6 690 руб.', '6 641 руб.')
 					+catalog-item('photo.png', 'Пульсометр Polar FT1', 'Для первых шагов в тренировках, основанных на сердечном ритме', '7 390 руб.', '7 021 руб.')
