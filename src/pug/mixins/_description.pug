@@ -27,3 +27,11 @@ mixin catalog-item(img, subtitle, descr, oldPrice, price)
 				.catalog-item__old-price #{oldPrice}
 				.catalog-item__price #{price}
 			button.catalog-item__btn КУПИТЬ
+
+mixin rewievs-item(img, title, static, descr)
+	.rewievs-item
+		img.rewievs-item__img(src="img/reviews/" + img, alt= title)
+		.rewievs-item__block 
+			.rewievs-item__title #{title}
+			.rewievs-item__static #{static}
+			.rewievs-item__descr !{descr}

@@ -1,0 +1,84 @@
+.map
+	position: relative
+	&__contacts
+		position: absolute
+		width: 460px
+		height: 270px
+		padding-top: 50px
+		padding-bottom: 56px
+		top: 0
+		left: 50%
+		z-index: 3
+		background: $red
+		transform: translateX(-50%)
+	&__addr
+		font-weight: 500
+		font-size: 20px
+		line-height: 20px
+		text-align: center
+		color: #FFFFFF
+	&__phone
+		display: block
+		margin-top: 36px
+		font-weight: 700
+		font-size: 20px
+		line-height: 20px
+		text-align: center
+		color: #FFFFFF
+		&:hover
+			color: #ffffff
+	&__links
+		display: flex
+		width: 212px
+		height: 52px
+		margin-top: 36px
+		margin-right: auto
+		margin-left: auto
+		justify-content: space-between
+	&__img
+		display: flex
+		width: 52px
+		height: 52px
+		align-items: center
+		justify-content: center
+		border: 2px solid #FFFFFF
+		border-radius: 100%
+		img
+			height: 24px
+
+@media ( max-width: 991px )
+	.map
+		&__contacts
+			width: 400px
+			height: 230px
+			padding-top: 30px
+			padding-bottom: 36px
+
+@media ( max-width: 767px )
+	.map
+		&__contacts
+			padding-bottom: 30px
+		&__addr
+			font-size: 18px
+			line-height: 18px
+		&__phone
+			margin-top: 26px
+			font-size: 18px
+			line-height: 18px
+		&__links
+			margin-top: 26px
+
+@media ( max-width: 575px )
+	.map
+		&__contacts
+			min-height: 180px
+			width: 100vw
+		&__addr
+			font-size: 16px
+			line-height: 16px
+		&__phone
+			margin-top: 20px
+			font-size: 16px
+			line-height: 16px
+		&__links
+			margin-top: 20px
