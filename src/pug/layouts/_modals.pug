@@ -1,7 +1,15 @@
 .modals
-	.modals__item.modals__consultation
+	.modals__item#consultation
 		.modals__close &times 
 		.modals__subtitle Просто заполните форму заявки
 		.modals__descr и мы перезвоним вам в течении 10 минут
-
 		include _form.pug
+	.modals__item#order
+		.modals__close &times 
+		.modals__subtitle Ваш заказ:
+		.modals__descr Пульсометр Polar FT1
+		include _form-order.pug
+	.modals__item.modals__item_mini#thanks
+		.modals__close &times 
+		.modals__subtitle Спасибо за вашу заявку!
+		.modals__descr Наш менеджер свяжется с вами #[br]в ближайшее время!

@@ -19,4 +19,23 @@ $(document).ready(function() {
 	toggleTabs('.catalog-item__link');
 	toggleTabs('.catalog-item__back');
 
+	//Modals
+	$('[data-modal=consultation]').on('click', function () {
+		$('.modals, #consultation').fadeIn('slow');
+	});
+
+	$('.modals, .modals__close').on('click', function () {
+		$('.modals, #consultation, #order, #thanks').fadeOut('slow');
+	});
+
+	// $('.catalog-item__btn').on('click', function () {
+	// 	$('.modals, #order').fadeIn('slow');
+	// });
+
+	$('.catalog-item__btn').each(function (i) {
+		$(this).on('click', function () {
+			$('#order .modals__descr').text($('.catalog-item__subtitle').eq(i).text());
+			$('.modals, #order').fadeIn('slow');
+		});
+	});
 });
