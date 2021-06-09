@@ -24,13 +24,9 @@ $(document).ready(function() {
 		$('.modals, #consultation').fadeIn('slow');
 	});
 
-	$('.modals, .modals__close').on('click', function () {
+	$('.modals__close').on('click', function () {
 		$('.modals, #consultation, #order, #thanks').fadeOut('slow');
 	});
-
-	// $('.catalog-item__btn').on('click', function () {
-	// 	$('.modals, #order').fadeIn('slow');
-	// });
 
 	$('.catalog-item__btn').each(function (i) {
 		$(this).on('click', function () {
@@ -38,4 +34,37 @@ $(document).ready(function() {
 			$('.modals, #order').fadeIn('slow');
 		});
 	});
+
+	function valideForm(form) {
+		$(form).validate({
+			rules: {
+				name: {
+					required: true,
+					minlength: 2
+				},
+				tel: 'required',
+				email: {
+					required: true,
+					email: true
+				}
+			},
+			messages: {
+				name: {
+					required: 'Пожалуйста введите свое имя',
+					minlength: jQuery.validator.format('Введите пожалуйста не менее {0} символов')
+				},
+				tel: 'Пожалуйста введите свой номер телефона',
+				email: {
+					required: 'Пожалуйста введите свою почту',
+					email: 'Неправильно введена почта'
+				}
+			}
+		});
+	}
+
+	valideForm('#consultation-form');
+	valideForm('#consultation .feed-form');
+	valideForm('#order .feed-form');
+
+	$('input[name=tel]').mask("+7(999) 999-9999");
 });

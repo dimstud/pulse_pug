@@ -1,8 +1,8 @@
-form.feed-form(action="#", method="get")
+form.feed-form(id=FeedForm ? 'consultation-form' : ' ' action="#", method="get")
 	input(type="text", name="name", placeholder="Ваше имя")
 	input(type="tel", name="tel", placeholder="Ваш телефон")
 	input(type="email", name="email", placeholder="Ваш E-mail")
 	if modal
 		button.button.button_submit купить
 	else
-		button.button.button_submit(data-modal="consultation") заказать кОНСУЛЬТАЦИЮ
+		button.button.button_submit заказать кОНСУЛЬТАЦИЮ
