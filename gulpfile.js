@@ -66,6 +66,13 @@ gulp.task('copy:img', function(callback) {
 	callback();
 });
 
+// Копирование Mailer
+gulp.task('copy:mailer', function(callback) {
+	return gulp.src('./src/mailer/**/*.*')
+		.pipe(gulp.dest('./dist/mailer/'))
+	callback();
+});
+
 // Копирование Шрифты
 gulp.task('copy:fonts', function(callback) {
 	return gulp.src('./src/fonts/**/*.*')
@@ -119,7 +126,7 @@ gulp.task(
 		'default', 
 		gulp.series( 
 			gulp.parallel('clean:dist'),
-			gulp.parallel('sass', 'pug','copy:fonts', 'copy:img', 'copy:css', 'copy:js'), 
+			gulp.parallel('sass', 'pug','copy:fonts', 'copy:img', 'copy:css', 'copy:js', 'copy:mailer'), 
 			gulp.parallel('server', 'watch'), 
 			)
 	);
