@@ -29,7 +29,7 @@ mixin catalog-item(img, subtitle, descr, oldPrice, price)
 			button.catalog-item__btn КУПИТЬ
 
 mixin rewievs-item(img, title, static, descr)
-	.rewievs-item
+	.rewievs-item.animate__backInUp.animate__animated.wow
 		img.rewievs-item__img(src="img/reviews/" + img, alt= title)
 		.rewievs-item__block 
 			.rewievs-item__title #{title}
