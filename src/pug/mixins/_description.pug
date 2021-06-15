@@ -1,6 +1,6 @@
-mixin advantages__item(img, title, subtitle, descr)
+mixin advantages__item(img, title, subtitle, descr, classmod='')
 	.advantages__item
-		img.advantages__icon(src="img/advantages/" + img, alt= title)
+		img.advantages__icon(class=classmod src="img/advantages/" + img, alt= title)
 		.advantages__subtitle #{subtitle}
 		.advantages__descr #{descr}
 
