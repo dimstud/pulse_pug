@@ -9,6 +9,8 @@ const plumber = require('gulp-plumber');
 const pug = require('gulp-pug');
 const del = require('del');
 const fs = require('fs');
+const htmlmin = require('gulp-htmlmin');
+const imagemin = require('gulp-imagemin');
 
 // Таск для сборки Gulp файлов
 gulp.task('pug', function(callback) {
@@ -25,6 +27,7 @@ gulp.task('pug', function(callback) {
 		.pipe( pug({
 			pretty: true
 		}) )
+		.pipe(htmlmin({ collapseWhitespace: true }))
 		.pipe( gulp.dest('./dist/') )
 		.pipe( browserSync.stream() )
 	callback();
@@ -62,6 +65,7 @@ gulp.task('copy:css', function(callback) {
 // Копирование Изображений
 gulp.task('copy:img', function(callback) {
 	return gulp.src('./src/img/**/*.*')
+		.pipe(imagemin())
 		.pipe(gulp.dest('./dist/img/'))
 	callback();
 });
